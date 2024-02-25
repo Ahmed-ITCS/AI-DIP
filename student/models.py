@@ -17,3 +17,9 @@ class SkillAssessment(models.Model):
     def __str__(self):
         return f"Skill Assessment for {self.student.name}"
     
+class AIManager(models.Model):
+    id = models.AutoField(primary_key=True)
+    problem_id = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"AIManager ID: {self.id}, Problem ID: {self.problem_id}"
